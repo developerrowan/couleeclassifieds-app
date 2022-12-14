@@ -1,4 +1,11 @@
+import { useEffect } from 'react';
+import { setPageTitle } from '../services/auth.service';
+
 export default function Jobs() {
+  useEffect(() => {
+    setPageTitle('Jobs');
+  }, []);
+
   return (
     <div className="container col-xxl-8 px-4 py-5">
       <div className="row flex-lg-row-reverse align-items-center g-5 py-5">

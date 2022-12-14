@@ -3,7 +3,7 @@ import { useForm } from 'react-hook-form';
 import { useNavigate, useParams, useSearchParams } from 'react-router-dom';
 import { useAuth } from '../../hooks/auth.hook';
 import { UserRoleDto } from '../../models/user-role.dto';
-import { getRoleById, insertRole, updateRole } from '../../services/auth.service';
+import { getRoleById, insertRole, setPageTitle, updateRole } from '../../services/auth.service';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import clsx from 'clsx';
 
@@ -52,6 +52,9 @@ export default function Role() {
 
   useEffect(() => {
     const rid = +roleId!;
+
+    setPageTitle(`Role ${rid}`);
+
     if (rid > 0) {
       getRoleById(+roleId!).then((role) => {
         setCreationMode(false);

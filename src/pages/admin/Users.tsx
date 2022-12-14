@@ -2,7 +2,12 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { useEffect, useState } from 'react';
 import { UserRoleDto } from '../../models/user-role.dto';
 import { UserDto } from '../../models/user.dto';
-import { getAllUserRoles, getAllUsers, deleteUser } from '../../services/auth.service';
+import {
+  getAllUserRoles,
+  getAllUsers,
+  deleteUser,
+  setPageTitle
+} from '../../services/auth.service';
 import Modal from 'bootstrap/js/dist/modal';
 import clsx from 'clsx';
 import { useAuth } from '../../hooks/auth.hook';
@@ -14,6 +19,8 @@ export default function Users() {
   const [userIdToDelete, setUserIdToDelete] = useState(0);
 
   useEffect(() => {
+    setPageTitle('Users');
+
     initialize();
   }, []);
 

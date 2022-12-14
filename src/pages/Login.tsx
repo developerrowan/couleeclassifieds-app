@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react';
 import { useForm } from 'react-hook-form';
 import { useNavigate, useSearchParams } from 'react-router-dom';
 import { useAuth } from '../hooks/auth.hook';
-import { getUser, isUserEmployer, login } from '../services/auth.service';
+import { getUser, isUserEmployer, login, setPageTitle } from '../services/auth.service';
 
 export default function Login() {
   const {
@@ -17,6 +17,8 @@ export default function Login() {
   const [searchParams] = useSearchParams();
 
   useEffect(() => {
+    setPageTitle('Login');
+
     if (user) {
       navigate('/profile');
     }

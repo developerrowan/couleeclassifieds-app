@@ -4,7 +4,13 @@ import { useEffect, useState } from 'react';
 import { useForm } from 'react-hook-form';
 import { useParams, useSearchParams } from 'react-router-dom';
 import { UserDto } from '../models/user.dto';
-import { getAllUserRoles, getUser, getUserById, updateUser } from '../services/auth.service';
+import {
+  getAllUserRoles,
+  getUser,
+  getUserById,
+  setPageTitle,
+  updateUser
+} from '../services/auth.service';
 
 export default function UserProfile() {
   const { register, handleSubmit, formState } = useForm();
@@ -37,6 +43,8 @@ export default function UserProfile() {
   const [searchParams] = useSearchParams();
 
   useEffect(() => {
+    setPageTitle('Profile');
+
     const uid = getUser().userId;
     getUserById(uid).then((user) => {
       setUser(user);

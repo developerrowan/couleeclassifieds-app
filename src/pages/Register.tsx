@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react';
 import { useForm } from 'react-hook-form';
 import { useNavigate, useSearchParams } from 'react-router-dom';
 import { useAuth } from '../hooks/auth.hook';
-import { login, registerUser, userWithEmailExists } from '../services/auth.service';
+import { login, registerUser, setPageTitle, userWithEmailExists } from '../services/auth.service';
 
 export default function Register() {
   const {
@@ -19,6 +19,8 @@ export default function Register() {
   const [searchParams] = useSearchParams();
 
   useEffect(() => {
+    setPageTitle('Register');
+
     if (user) {
       navigate('/profile');
     }

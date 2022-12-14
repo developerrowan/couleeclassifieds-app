@@ -1,4 +1,11 @@
+import { useEffect } from 'react';
+import { setPageTitle } from '../services/auth.service';
+
 export default function About() {
+  useEffect(() => {
+    setPageTitle('About');
+  }, []);
+
   return (
     <>
       <div className="container-fluid">

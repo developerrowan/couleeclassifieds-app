@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react';
 import { useForm } from 'react-hook-form';
 import { useNavigate, useSearchParams } from 'react-router-dom';
 import HeroImage from '../assets/img/undraw_feeling_proud_qne1.svg';
+import { setPageTitle } from '../services/auth.service';
 import { getAllJobs, getDaysAgo } from '../services/job.service';
 
 export default function Home() {
@@ -34,6 +35,8 @@ export default function Home() {
   };
 
   useEffect(() => {
+    setPageTitle('Home');
+
     async function getJobs() {
       getAllJobs(3).then((j) => {
         if (j) {

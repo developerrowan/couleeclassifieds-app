@@ -271,3 +271,9 @@ export const getUser = () => {
 
   return null;
 };
+
+export const setPageTitle = (title: string) => {
+  const SITE_TITLE = import.meta.env.VITE_SITE_TITLE;
+
+  document.title = `${title} | ${SITE_TITLE}`;
+};

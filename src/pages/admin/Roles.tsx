@@ -1,12 +1,19 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { useEffect, useState } from 'react';
 import { UserRoleDto } from '../../models/user-role.dto';
-import { getAllUserRoles, getAllUsers, deleteUser } from '../../services/auth.service';
+import {
+  getAllUserRoles,
+  getAllUsers,
+  deleteUser,
+  setPageTitle
+} from '../../services/auth.service';
 
 export default function Roles() {
   const [roles, setRoles] = useState([]);
 
   useEffect(() => {
+    setPageTitle('Roles');
+
     getAllUserRoles().then((roles) => {
       setRoles(roles);
     });

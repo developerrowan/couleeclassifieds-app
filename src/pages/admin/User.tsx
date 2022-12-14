@@ -4,7 +4,13 @@ import { useNavigate, useParams, useSearchParams } from 'react-router-dom';
 import { useAuth } from '../../hooks/auth.hook';
 import { UserDto } from '../../models/user.dto';
 import { UserRoleDto } from '../../models/user-role.dto';
-import { getAllUserRoles, getUserById, insertUser, updateUser } from '../../services/auth.service';
+import {
+  getAllUserRoles,
+  getUserById,
+  insertUser,
+  setPageTitle,
+  updateUser
+} from '../../services/auth.service';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import clsx from 'clsx';
 
@@ -62,6 +68,9 @@ export default function User() {
     });
 
     const uid = +userId!;
+
+    setPageTitle(`User ${uid}`);
+
     if (uid > 0) {
       getUserById(+userId!).then((user) => {
         setCreationMode(false);
