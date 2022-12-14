@@ -1,0 +1,181 @@
+{
+    "users": [
+        {
+            "id": 7,
+            "firstName": "Bob",
+            "lastName": "Smith",
+            "email": "bob@smith.com",
+            "password": "test",
+            "roleId": 1,
+            "active": true
+        },
+        {
+            "id": 96,
+            "firstName": "Betty",
+            "lastName": "Smith",
+            "email": "betty@smith.com",
+            "password": "test",
+            "roleId": 2,
+            "active": true
+        },
+        {
+            "id": 33,
+            "firstName": "Barney",
+            "lastName": "Smith",
+            "email": "barney@smith.com",
+            "password": "test",
+            "roleId": 1,
+            "active": false
+        }
+    ],
+    "roles": [
+        {
+            "id": 1,
+            "name": "Standard User",
+            "description": "A standard user"
+        },
+        {
+            "id": 2,
+            "name": "Admin",
+            "description": "A user with elevated permissions"
+        }
+    ],
+    "userProfiles": [
+        {
+            "id": 1,
+            "userId": 7,
+            "userSalutation": "Mr.",
+            "profilePhotoUrl": "URL",
+            "userStreet": "123 Street St",
+            "userCity": "La Crosse",
+            "userState": "WI",
+            "userZip": 54603
+        },
+        {
+            "id": 2,
+            "userId": 96,
+            "userSalutation": "Mrs.",
+            "profilePhotoUrl": "URL",
+            "userStreet": "123 4th St",
+            "userCity": "La Crosse",
+            "userState": "WI",
+            "userZip": 54603
+        },
+        {
+            "id": 3,
+            "userId": 33,
+            "userSalutation": "Mr.",
+            "profilePhotoUrl": "URL",
+            "userStreet": "123 Main St",
+            "userCity": "La Crosse",
+            "userState": "WI",
+            "userZip": 54603
+        }
+    ],
+    "jobs": [
+        {
+            "id": 1,
+            "jobPostedByUser": 7,
+            "jobPayRangeMin": 35000,
+            "jobPayRangeMax": 55000,
+            "jobCity": "La Crosse",
+            "jobState": "WI",
+            "jobZip": 54603,
+            "jobDescription": "We need a widget counter",
+            "jobCompanyName": "Widgets Inc.",
+            "jobPostedDate": "2022-01-01"
+        },
+        {
+            "id": 2,
+            "jobPostedByUser": 7,
+            "jobPayRangeMin": 42000,
+            "jobCity": "La Crosse",
+            "jobState": "WI",
+            "jobZip": 54603,
+            "jobDescription": "We need a widget counter",
+            "jobCompanyName": "Widgets Inc.",
+            "jobPostedDate": "2022-01-01"
+        },
+        {
+            "id": 3,
+            "jobPostedByUser": 7,
+            "jobPayRangeMin": 73000,
+            "jobPayRangeMax": 120000,
+            "jobCity": "La Crosse",
+            "jobState": "WI",
+            "jobZip": 54603,
+            "jobDescription": "We need a widget counter",
+            "jobCompanyName": "Widgets Inc.",
+            "jobPostedDate": "2022-01-01"
+        }
+    ],
+    "resumes": [
+        {
+            "id": 1,
+            "resumeBelongsToUser": 33
+        },
+        {
+            "id": 2,
+            "resumeBelongsToUser": 96
+        },
+        {
+            "id": 3,
+            "resumeBelongsToUser": 7
+        }
+    ],
+    "resumeEntries": [
+        {
+            "id": 1,
+            "resumeId": 1,
+            "resumeEntryType": "WORK",
+            "resumeEntryTitle": "Widget Counter",
+            "resumeEntryOrganizationOrInstitution": "Widget Inc.",
+            "resumeEntryLocationCity": "La Crosse",
+            "resumeEntryLocationState": "WI",
+            "resumeEntryDateStarted": "2022-01-01",
+            "resumeEntryDateEnded": "2022-05-01",
+            "resumeEntryDescription": "I counted widgets." 
+        },
+        {
+            "id": 2,
+            "resumeId": 1,
+            "resumeEntryType": "EDUCATION",
+            "resumeEntryTitle": "BS in Widget Counting",
+            "resumeEntryOrganizationOrInstitution": "Widget Edu",
+            "resumeEntryLocationCity": "La Crosse",
+            "resumeEntryLocationState": "WI",
+            "resumeEntryDateStarted": "2022-01-01",
+            "resumeEntryDateEnded": "2022-05-01",
+            "resumeEntryDescription": "I got a degree." 
+        },
+        {
+            "id": 3,
+            "resumeId": 1,
+            "resumeEntryType": "WORK",
+            "resumeEntryTitle": "Food Preparer",
+            "resumeEntryOrganizationOrInstitution": "Food Co.",
+            "resumeEntryLocationCity": "La Crosse",
+            "resumeEntryLocationState": "WI",
+            "resumeEntryDateStarted": "2020-01-01",
+            "resumeEntryDateEnded": "2022-01-01",
+            "resumeEntryDescription": "I made food." 
+        }
+    ],
+    "resumeSkills": [
+        {
+            "id": 1,
+            "resumeId": 1,
+            "resumeSkillDescription": "Widget counting"
+        },
+        {
+            "id": 2,
+            "resumeId": 1,
+            "resumeSkillDescription": "Interpersonal skills"
+        },
+        {
+            "id": 3,
+            "resumeId": 1,
+            "resumeSkillDescription": "Microsoft Excel"
+        }
+    ]
+}
